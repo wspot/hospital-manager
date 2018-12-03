@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 
+
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -35,7 +36,7 @@ import { PatientComponent } from './patient/patient.component';
 
   ],
   imports: [
-    BrowserModule,NgbModule, HttpClientModule,AppRoutingModule,BrowserAnimationsModule,MatSidenavModule,MatIconModule,ChartsModule,
+    BrowserModule,NgbModule, HttpClientModule,AppRoutingModule,BrowserAnimationsModule,MatSidenavModule,MatIconModule,ChartsModule
   ],
   providers: [],
   exports:[],

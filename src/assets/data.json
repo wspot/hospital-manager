@@ -2,6 +2,7 @@
     "ID": "001",
    "Name": "jhon snow",
     "Type": "patient",
+    "PHONE": "065559875"
 },
 {
     "ID": "002",
@@ -9,6 +10,7 @@
     "Type": "patient",
     "PHONE": "06665448"
 },
+
 {
     "ID": "003",
     "Name": "Cooper's Hawk",

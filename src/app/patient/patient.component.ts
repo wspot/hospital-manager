@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { HttpClientModule } from '@angular/common/http';
-import { HttpClient } from '@angular/common/http';
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpClient,HttpErrorResponse } from '@angular/common/http';
 
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-patient',
@@ -22,17 +21,18 @@ export class PatientComponent implements OnInit {
 
 
 
-  constructor(private httpService: HttpClient,private modalService: NgbModal) {
+    constructor(private httpService: HttpClient,private modalService: NgbModal) {
 
 
-   }
+     }
 
   ngOnInit() {
 
     this.httpService.get('assets/data.json').subscribe(
    data => {
      this.arrPatients = data as string [];	 // FILL THE ARRAY WITH DATA.
-       //console.log(this.arrPatients);
+      // console.log(this.arrPatients[0]["ID"]);
+
    },
    (err: HttpErrorResponse) => {
      console.log (err.message);
@@ -45,6 +45,12 @@ export class PatientComponent implements OnInit {
   open(content) {
   this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
     this.closeResult = `Closed with: ${result}`;
+    //console.log(this.arrPatients);
+    let id=this.arrPatients.length+1;
+    let id2='id';
+    let patient={"Name":this.patname,"Type":"patient","PHONE":this.patphone,"ID":id2};
+    this.arrPatients.push(JSON.stringify(patient));
+
   }, (reason) => {
     this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
   });
@@ -59,12 +65,6 @@ private getDismissReason(reason: any): string {
 
   } else {
 
-    console.log(this.arrPatients);
-    let id=this.arrPatients.length+1;
-    let id2='id';
-    let patient={"Name":this.patname,"Type":"patient","PHONE":this.patphone,"ID":id2};
-    this.arrPatients.push(JSON.stringify(patient));
-    
     return  `with: ${reason}`;
   }
 
