@@ -50,9 +50,12 @@
       <table class="table table-borderless mt-5 mb-5">
         <thead class="thead">
           <tr>
-            <th scope="col">name</th>
-            <th scope="col">phone</th>
-            <th scope="col">type</th>
+            <th scope="col">
+              <h4 class="h4 text-capitalize">name</h4></th>
+            <th scope="col">
+              <h4 class="h4 text-capitalize">phone</h4></th>
+            <th scope="col">
+              <h4 class="h4 text-capitalize">type</h4></th>
           </tr>
         </thead>
 
@@ -61,11 +64,17 @@
 
           <tr *ngFor="let item of arrPatients">
 
-
-              <td *ngIf="item.Type=='patient'">{{item.Name}}</td>
-              <td *ngIf="item.Type=='patient'">{{item.PHONE}}</td>
-              <td *ngIf="item.Type=='patient'">{{item.Type}}</td>
-
+              <td *ngIf="item.Type=='patient'">
+                <h4 class="h4 font-weight-normal text-capitalize">{{item.Name}}</h4>
+              </td>
+              <td *ngIf="item.Type=='patient'">
+                <h4 class="h4 font-weight-normal text-capitalize"> {{item.PHONE}}</h4>
+              </td>
+              <td *ngIf="item.Type=='patient'">
+                <h4 class="h4 font-weight-normal text-capitalize">
+                  {{item.Type}}
+                </h4>
+              </td>
 
           </tr>
 
