@@ -1,0 +1,50 @@
+
+.example-container {
+  width: 100vw;
+  height: 100vh;
+  border-top: 5px solid #007bff;
+
+
+}
+
+.example-sidenav {
+  padding: 20px;
+  background-image: linear-gradient(to right,#007bff,#6610f2);
+  width: 20%;
+}
+
+.navbar{
+  background-color: white;
+  height: 100px;
+  margin-top: 5px;
+}
+#sidebar-togler:focus{
+ outline: none;
+
+}
+
+/*************************************/
+
+#logo{
+  width: 30px;
+  height: 20px;
+}
+#logo-container{
+height: 100px;
+}
+#logo-list{
+  margin-top: 15px;
+}
+
+.link-items{
+  margin-top: 30px;
+
+}
+.link-item:focus{
+  outline: none;
+}
+
+.link-item{
+  background-color: inherit;
+  color: white;
+}

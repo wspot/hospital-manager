@@ -1,0 +1,10 @@
+data = '[
+  {"name" : "Ashwin", "age" : "20" , "function":"patient"},
+  {"name" : "anas", "age" : "21" , "function":"patient"},
+  {"name" : "ismail", "age" : "23" , "function":"patient"},
+
+  {"name" : "peter", "age" : "40" , "function":"doctor"}
+  {"name" : "jhon", "age" : "68" , "function":"doctor"}
+  {"name" : "doe", "age" : "25" , "function":"doctor"}
+
+  ]';
