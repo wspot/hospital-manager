@@ -8,7 +8,7 @@ step-2 : run npm install to install all the dependencies
 
 step-3 : run ng serve from the root of the project , and here you go :D 
 
-PS : you may need internet connection for better rendering (icons and fonts )
+PS : you may need internet connection for better rendering (icons and fonts ) , and the application have not been tested for the small and extra large devices
 
 Usage : 
 
