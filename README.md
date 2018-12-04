@@ -20,7 +20,7 @@ Usage :
 
 - click on patients to see the patients list  (the add patient modal doesn't add patients) 
 
-Assessment : 
+Assignment : 
 
 What i correctly implemented ? 
 
