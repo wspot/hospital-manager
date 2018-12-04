@@ -44,3 +44,6 @@ How many hours i spent ?
 i spent almost : 
 - 2 hours for designing the plateform .
 - 8 hours of work and research. 
+
+Screenshots:
+<img src="./home2.png" alt="">
