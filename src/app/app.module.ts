@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 
 
 import { HttpClientModule } from '@angular/common/http';
@@ -36,14 +36,14 @@ import { PatientComponent } from './patient/patient.component';
 
   ],
   imports: [
-    BrowserModule,NgbModule, HttpClientModule,AppRoutingModule,BrowserAnimationsModule,MatSidenavModule,MatIconModule,ChartsModule
+    BrowserModule, NgbModule, HttpClientModule, AppRoutingModule, BrowserAnimationsModule, MatSidenavModule, MatIconModule, ChartsModule
   ],
   providers: [],
-  exports:[],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
 
 
 
- }
+}

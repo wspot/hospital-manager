@@ -1,10 +1,12 @@
-<mat-drawer-container class="example-container"   autosize>
+<mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" [(opened)]="navstatus" mode="side">
 
     <div class="container" id="logo-container">
       <ul class="list-inline" id="logo-list">
         <li class="list-inline-item"><img src="./../../assets/logo.png" id="logo"></li>
-        <li class="list-inline-item align-middle"><h3  class="text-white m-0">Medica-Web</h3></li>
+        <li class="list-inline-item align-middle">
+          <h3 class="text-white m-0">Medica-Web</h3>
+        </li>
       </ul>
     </div>
 
@@ -13,40 +15,40 @@
     <ul class="list-group list-group-flush link-items">
 
 
-    <li class="list-group-item link-item"  routerLink="/home">
+      <li class="list-group-item link-item" routerLink="/home">
         <h4 class="font-weight-light text-uppercase">
-        dashboard
-      </h4>
-    </li>
+          dashboard
+        </h4>
+      </li>
 
-    <li class="list-group-item link-item"  routerLink="/patient">
-          <h4 class="font-weight-light text-uppercase">
+      <li class="list-group-item link-item" routerLink="/patient">
+        <h4 class="font-weight-light text-uppercase">
           patients
         </h4>
       </li>
 
       <li class="list-group-item link-item">
         <h4 class="font-weight-light text-uppercase">
-        doctors
-      </h4>
-    </li>
+          doctors
+        </h4>
+      </li>
 
-    <li class="list-group-item link-item">
-      <h4 class="font-weight-light text-uppercase">
-      Nurses
-    </h4>
-  </li>
-  <li class="list-group-item link-item">
-    <h4 class="font-weight-light text-uppercase">
-    Sales
-  </h4>
-</li>
+      <li class="list-group-item link-item">
+        <h4 class="font-weight-light text-uppercase">
+          Nurses
+        </h4>
+      </li>
+      <li class="list-group-item link-item">
+        <h4 class="font-weight-light text-uppercase">
+          Sales
+        </h4>
+      </li>
 
-<li class="list-group-item link-item">
-  <h4 class="font-weight-light text-uppercase">
-  Employes
-</h4>
-</li>
+      <li class="list-group-item link-item">
+        <h4 class="font-weight-light text-uppercase">
+          Employes
+        </h4>
+      </li>
 
     </ul>
 
@@ -65,25 +67,24 @@
 
 
 
-        <form class="form-inline my-2 my-lg-0">
+      <form class="form-inline my-2 my-lg-0">
 
-            <div class="input-group mr-sm-2">
+        <div class="input-group mr-sm-2">
 
-              <input type="text" class="form-control" placeholder="Search here" aria-label="Search"
-              aria-describedby="button-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary my-2 my-sm-0" type="submit" id="button-addon2">Search</button>
-              </div>
-            </div>
+          <input type="text" class="form-control" placeholder="Search here" aria-label="Search" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit" id="button-addon2">Search</button>
+          </div>
+        </div>
 
-        </form>
+      </form>
 
-      </nav>
+    </nav>
     <!-- -->
 
     <!--inner content -->
 
-        <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
     <!-- inner content ends -->
 
   </div>

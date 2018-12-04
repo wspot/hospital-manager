@@ -7,20 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraphComponent implements OnInit {
 
-  public lineChartLabels:string[] = ['january', 'february', 'march', 'april', 'may', 'june', 'july'];
-  public lineChartData:number[] = [0,15,30,10,15,90,77];
-  public lineChartType:string = 'line';
+  public lineChartLabels: string[] = ['january', 'february', 'march', 'april', 'may', 'june', 'july'];
+  public lineChartData: number[] = [0, 15, 30, 10, 15, 90, 77];
+  public lineChartType: string = 'line';
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  public chartClicked(e:any):void {
+  public chartClicked(e: any): void {
     console.log(e);
   }
 
-  public chartHovered(e:any):void {
+  public chartHovered(e: any): void {
     console.log(e);
   }
 

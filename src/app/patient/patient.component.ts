@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { HttpClient,HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -14,63 +14,61 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 export class PatientComponent implements OnInit {
 
-  arrPatients: string [];
+  arrPatients: string[];
   closeResult: string;
-  public patphone='';
-  public patname='';
+  public patphone = '';
+  public patname = '';
 
 
 
-    constructor(private httpService: HttpClient,private modalService: NgbModal) {
+  constructor(private httpService: HttpClient, private modalService: NgbModal) {
 
 
-     }
+  }
 
   ngOnInit() {
 
     this.httpService.get('assets/data.json').subscribe(
-   data => {
-     this.arrPatients = data as string [];	 // FILL THE ARRAY WITH DATA.
-      // console.log(this.arrPatients[0]["ID"]);
+      data => {
+        this.arrPatients = data as string[];	 // FILL THE ARRAY WITH DATA.
+        // console.log(this.arrPatients[0]["ID"]);
 
-   },
-   (err: HttpErrorResponse) => {
-     console.log (err.message);
-   }
- );
-/***/
+      },
+      (err: HttpErrorResponse) => {
+        console.log(err.message);
+      }
+    );
+    /***/
 
   }
 
   open(content) {
-  this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-    this.closeResult = `Closed with: ${result}`;
-    //console.log(this.arrPatients);
-    let id=this.arrPatients.length+1;
-    let id2='id';
-    let patient={"Name":this.patname,"Type":"patient","PHONE":this.patphone,"ID":id2};
-    this.arrPatients.push(JSON.stringify(patient));
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+      //console.log(this.arrPatients);
+      let id = this.arrPatients.length + 1;
+      let id2 = 'id';
+      let patient = { "Name": this.patname, "Type": "patient", "PHONE": this.patphone, "ID": id2 };
+      this.arrPatients.push(JSON.stringify(patient));
 
-  }, (reason) => {
-    this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-  });
-}
-
-private getDismissReason(reason: any): string {
-  if (reason === ModalDismissReasons.ESC) {
-    return 'by pressing ESC';
-  } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-
-    return 'by clicking on a backdrop';
-
-  } else {
-
-    return  `with: ${reason}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
   }
 
-}
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
 
+      return 'by clicking on a backdrop';
 
+    } else {
+
+      return `with: ${reason}`;
+    }
+
+  }
 
 
 }
