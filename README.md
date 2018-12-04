@@ -46,4 +46,14 @@ i spent almost :
 - 8 hours of work and research. 
 
 Screenshots:
+
+main view:
+
+<img src="./home.png" alt="">
+
+
 <img src="./home2.png" alt="">
+
+patient view:
+
+<img src="./patientsview.png" alt="">
