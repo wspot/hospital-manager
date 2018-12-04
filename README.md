@@ -12,7 +12,7 @@ PS : you may need internet connection for better rendering (icons and fonts )
 
 Usage : 
 
--click on the list button on top to toggle the sidenave
+- click on the list button on top to toggle the sidenave
 
 - click on  dashboard to navigate to dashboard (the others are not working , i made just two to preview the routing ) 
 
