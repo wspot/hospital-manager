@@ -6,7 +6,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 import { CardComponent } from './card/card.component';
@@ -22,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ChartsModule } from 'ng2-charts';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PatientComponent } from './patient/patient.component';
+import { ErrorInerceptor } from './Shared/Interceptors/error-inerceptor';
 
 
 
@@ -38,7 +39,9 @@ import { PatientComponent } from './patient/patient.component';
   imports: [
     BrowserModule, NgbModule, HttpClientModule, AppRoutingModule, BrowserAnimationsModule, MatSidenavModule, MatIconModule, ChartsModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInerceptor, multi: true }
+  ],
   exports: [],
   bootstrap: [AppComponent]
 })

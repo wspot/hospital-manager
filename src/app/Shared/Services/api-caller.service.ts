@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { switchMap,catchError } from 'rxjs/operators'; 
+import { map } from 'rxjs/operators'; 
 import { of } from 'rxjs';
 
 @Injectable({
@@ -16,7 +16,11 @@ export class ApiCallerService {
   
   public callGetService(servicename : string){
     return this.httpService.get(this.serverAddress + this.serviceName).pipe(
-      catchError( () => { return of(null) })
+      map(resp =>{
+        if( !('type' in resp)){
+          resp['type'] = 'response';
+        }
+      })
     );
   }
 
