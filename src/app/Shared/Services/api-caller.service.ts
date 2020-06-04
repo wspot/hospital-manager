@@ -9,13 +9,12 @@ import { of } from 'rxjs';
 export class ApiCallerService {
 
   public serverAddress : string = "";
-  public serviceName : string = "assets/data.json";
 
   constructor(private httpService: HttpClient) { }
 
   
-  public callGetService(servicename : string){
-    return this.httpService.get(this.serverAddress + this.serviceName).pipe(
+  public callGetService(serviceName : string){
+    return this.httpService.get(this.serverAddress + serviceName).pipe(
       map(resp =>{
         if( !('type' in resp)){
           resp['type'] = 'response';
