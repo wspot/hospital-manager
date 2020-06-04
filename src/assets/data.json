@@ -1,34 +1,32 @@
-[{
-    "ID": "001",
-   "Name": "jhon snow",
-    "Type": "patient",
-    "PHONE": "065559875"
-},
-{
-    "ID": "002",
-    "Name": "Bald Eagle",
-    "Type": "patient",
-    "PHONE": "06665448"
-},
-
-{
-    "ID": "003",
-    "Name": "Cooper's Hawk",
-    "Type": "patient",
-    "PHONE": "06665448"
-}
-,{
-    "ID": "004",
-    "Name": "jhon doe",
-    "Type": "doctor",
-    "PHONE": "95238226663"
-}
-,{
-    "ID": "005",
-    "Name": "miss cli",
-    "Type": "patient",
-    "PHONE": "95238226663"
-}
-
-
+[
+    {
+        "ID": "001",
+        "Name": "jhon snow",
+        "Type": "patient",
+        "PHONE": "065559875"
+    },
+    {
+        "ID": "002",
+        "Name": "Bald Eagle",
+        "Type": "patient",
+        "PHONE": "06665448"
+    },
+    {
+        "ID": "003",
+        "Name": "Cooper's Hawk",
+        "Type": "patient",
+        "PHONE": "06665448"
+    },
+    {
+        "ID": "004",
+        "Name": "jhon doe",
+        "Type": "doctor",
+        "PHONE": "95238226663"
+    },
+    {
+        "ID": "005",
+        "Name": "miss cli",
+        "Type": "patient",
+        "PHONE": "95238226663"
+    }
 ]
