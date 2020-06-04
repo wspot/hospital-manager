@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { ApiCallerService } from '../Shared/Services/api-caller.service';
 
 
 @Component({
@@ -14,6 +12,8 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 export class PatientComponent implements OnInit {
 
+  public getDataServiceName: string = "assets/data.json";
+
   arrPatients: string[];
   closeResult: string;
   public patphone = '';
@@ -21,25 +21,18 @@ export class PatientComponent implements OnInit {
 
 
 
-  constructor(private httpService: HttpClient, private modalService: NgbModal) {
-
-
-  }
+  constructor(private modalService: NgbModal, private apicaller: ApiCallerService) { }
 
   ngOnInit() {
-
-    this.httpService.get('assets/data.json').subscribe(
-      data => {
-        this.arrPatients = data as string[];	 // FILL THE ARRAY WITH DATA.
-        // console.log(this.arrPatients[0]["ID"]);
-
-      },
-      (err: HttpErrorResponse) => {
-        console.log(err.message);
+    this.apicaller.callGetService(this.getDataServiceName).subscribe(
+      (resp: any) => {
+        if (resp.type !== 'error') {
+          this.arrPatients = resp as string[];
+        } else {
+          console.log(resp);
+        }
       }
     );
-    /***/
-
   }
 
   open(content) {
@@ -67,8 +60,5 @@ export class PatientComponent implements OnInit {
 
       return `with: ${reason}`;
     }
-
   }
-
-
 }
