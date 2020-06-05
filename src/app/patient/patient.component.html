@@ -1,49 +1,11 @@
-<!-- modal-->
-<ng-template #content let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-
-    <div class="input-group input-group-sm mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
-      </div>
-      <input type="text" class="form-control" [(value)]="patname" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-    </div>
-
-    <div class="input-group input-group-sm mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-sm">Phone</span>
-      </div>
-      <input type="text" class="form-control" [(value)]="patphone" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-    </div>
-
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-  </div>
-</ng-template>
-
-
-
-<!-- modal-->
-
-
 <div class="container col-sm-11 main-content">
   <div class="row justify-content-center">
     <div class="col-sm-3 mt-4">
-
-      <button type="button" name="button" class="btn btn-primary rounded-0 shadow" (click)="open(content)">
-        <h4 class="h4">Add patient</h4></button>
-
+      <button type="button" name="button" class="btn btn-primary rounded-0 shadow" (click)="openSaveModal()">
+        <h4 class="h4">Add patient</h4>
+      </button>
     </div>
   </div>
-
-  <!-- -->
 
   <table class="table table-borderless mt-5 mb-5 shadow">
     <thead class="thead">
@@ -61,10 +23,7 @@
     </thead>
 
     <tbody>
-
-
       <tr *ngFor="let item of arrPatients">
-
         <td *ngIf="item.Type=='patient'">
           <h4 class="h4 font-weight-normal text-capitalize">{{item.Name}}</h4>
         </td>
@@ -76,16 +35,7 @@
             {{item.Type}}
           </h4>
         </td>
-
       </tr>
-
-
-
-
     </tbody>
   </table>
-
-  <!-- -->
-
-
 </div>

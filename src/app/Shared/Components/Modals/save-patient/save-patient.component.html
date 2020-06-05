@@ -1,0 +1,28 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Add patient</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.close('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+
+  <div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+    </div>
+    <input type="text" class="form-control" [(value)]="patname" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-sm">
+  </div>
+
+  <div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-sm">type</span>
+    </div>
+    <input type="text" class="form-control" [(value)]="patphone" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-sm">
+  </div>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Save click')">Save</button>
+</div>

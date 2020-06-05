@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ApiCallerService } from '../Shared/Services/api-caller.service';
+import { SavePatientComponent } from '../Shared/Components/Modals/save-patient/save-patient.component';
 
 
 @Component({
@@ -14,12 +15,10 @@ export class PatientComponent implements OnInit {
 
   public getDataServiceName: string = "assets/data.json";
 
-  arrPatients: string[];
-  closeResult: string;
-  public patphone = '';
-  public patname = '';
-
-
+  public arrPatients: string[];
+  public closeResult: string;
+  public patphone: string = '';
+  public patname: string = '';
 
   constructor(private modalService: NgbModal, private apicaller: ApiCallerService) { }
 
@@ -35,8 +34,9 @@ export class PatientComponent implements OnInit {
     );
   }
 
-  open(content) {
-    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+  openSaveModal() {
+    const modalRef = this.modalService.open(SavePatientComponent, { size: 'sm' });
+    modalRef.result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
       //console.log(this.arrPatients);
       let id = this.arrPatients.length + 1;

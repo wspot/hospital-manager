@@ -19,6 +19,7 @@ import { ChartsModule } from 'ng2-charts';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PatientComponent } from './patient/patient.component';
 import { ErrorInerceptor } from './Shared/Interceptors/error-inerceptor';
+import { SavePatientComponent } from './Shared/Components/Modals/save-patient/save-patient.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ErrorInerceptor } from './Shared/Interceptors/error-inerceptor';
     DonutComponent,
     DashboardComponent,
     PatientComponent,
+    SavePatientComponent,
 
   ],
   imports: [
@@ -36,6 +38,7 @@ import { ErrorInerceptor } from './Shared/Interceptors/error-inerceptor';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInerceptor, multi: true }
   ],
+  entryComponents: [SavePatientComponent],
   exports: [],
   bootstrap: [AppComponent]
 })
