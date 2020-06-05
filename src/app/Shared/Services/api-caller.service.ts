@@ -19,6 +19,7 @@ export class ApiCallerService {
         if( !('type' in resp)){
           resp['type'] = 'response';
         }
+        return resp;
       })
     );
   }
