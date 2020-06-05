@@ -1,7 +1,5 @@
-import { Component, OnInit,Input } from '@angular/core';
-import { CardComponent } from '../card/card.component';
-import { DonutComponent } from '../donut/donut.component';
-import { GraphComponent } from '../graph/graph.component';
+import { Component, OnInit } from '@angular/core';
+
  
 @Component({
   selector: 'app-dashboard',
