@@ -10,29 +10,22 @@
       </ul>
     </div>
 
-
-
     <ul class="list-group list-group-flush link-items">
-
-
       <li class="list-group-item link-item" routerLink="/home">
         <h4 class="font-weight-light text-uppercase">
           dashboard
         </h4>
       </li>
-
       <li class="list-group-item link-item" routerLink="/patient">
         <h4 class="font-weight-light text-uppercase">
           patients
         </h4>
       </li>
-
       <li class="list-group-item link-item">
         <h4 class="font-weight-light text-uppercase">
           doctors
         </h4>
       </li>
-
       <li class="list-group-item link-item">
         <h4 class="font-weight-light text-uppercase">
           Nurses
@@ -43,50 +36,34 @@
           Sales
         </h4>
       </li>
-
       <li class="list-group-item link-item">
         <h4 class="font-weight-light text-uppercase">
           Employes
         </h4>
       </li>
-
     </ul>
-
-
   </mat-drawer>
-
   <div class="example-sidenav-content">
-
-    <!-- -->
     <nav class="navbar  m-0">
-
-
-      <button class="btn btn-outline-primary rounded-0" type="button" mat-button (click)="drawer.toggle()" id="sidebar-togler">
+      <button class="btn btn-outline-primary rounded-0" type="button" mat-button (click)="drawer.toggle()"
+        id="sidebar-togler">
         <mat-icon>list</mat-icon>
       </button>
 
-
-
       <form class="form-inline my-2 my-lg-0 ">
-
         <div class="input-group mr-sm-2 ">
-
-          <input type="text" class="form-control rounded-0" placeholder="Search here" aria-label="Search" aria-describedby="button-addon2">
+          <input type="text" class="form-control rounded-0" placeholder="Search here" aria-label="Search"
+            aria-describedby="button-addon2">
           <div class="input-group-append">
-            <button class="btn btn-primary my-2 my-sm-0 rounded-0"  id="button-addon2">Search</button>
+            <button class="btn btn-primary my-0 rounded-0" id="button-addon2">Search</button>
           </div>
         </div>
-
       </form>
-
     </nav>
-    <!-- -->
 
     <!--inner content -->
-
     <router-outlet></router-outlet>
     <!-- inner content ends -->
-
   </div>
 
 
